@@ -33,7 +33,7 @@ public class FavoriteActivity extends AppCompatActivity {
         for(Site s : sites) {
             HashMap<String, String> decomposition = new HashMap<>();
             decomposition.put("name", s.getName());
-            decomposition.put("contry", s.getCountry());
+            decomposition.put("country", s.getCountry());
             dataSource.add(decomposition);
         }
 

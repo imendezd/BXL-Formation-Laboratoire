@@ -4,11 +4,14 @@ public class Site {
     private int siteId;
     private String name;
     private String country;
+    private SiteInfo siteInfo;
 
     public Site (int siteId, String name, String country) {
         this.siteId = siteId;
         this.name = name;
         this.country = country;
+        this.siteInfo = siteInfo;
+
     }
 
     public int getSiteId() {
@@ -33,6 +36,14 @@ public class Site {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public SiteInfo getSiteInfo() {
+        return siteInfo;
+    }
+
+    public void setSiteInfo(SiteInfo siteInfo) {
+        this.siteInfo = siteInfo;
     }
 
     @Override
