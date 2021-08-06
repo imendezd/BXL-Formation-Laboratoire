@@ -10,6 +10,8 @@ import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import be.bxl.formation.labo_final.models.Site;
+
 public class FavoriteActivity extends AppCompatActivity {
 
     ListView lvFavPlaces;
@@ -28,10 +30,10 @@ public class FavoriteActivity extends AppCompatActivity {
         //TODO add every fav site
 
         ArrayList<HashMap<String, String>> dataSource = new ArrayList<>();
-        for(Site p : sites) {
+        for(Site s : sites) {
             HashMap<String, String> decomposition = new HashMap<>();
-            decomposition.put("name", p.getName());
-            decomposition.put("contry", p.getCountry());
+            decomposition.put("name", s.getName());
+            decomposition.put("contry", s.getCountry());
             dataSource.add(decomposition);
         }
 
