@@ -3,4 +3,5 @@
     <string name="btn_map">See map</string>
     <string name="btn_favorite">Favorites locations</string>
     <string name="title_main_app">UNESCO Heritage</string>
+    <string name="btn_back">Back</string>
 </resources>
