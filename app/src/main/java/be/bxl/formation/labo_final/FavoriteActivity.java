@@ -48,8 +48,7 @@ public class FavoriteActivity extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btn_list_back);
         btnBack.setOnClickListener(v -> {
-            //TODO Back to main screen
-            //finish();
+            super.finish();
         });
     }
     //endregion

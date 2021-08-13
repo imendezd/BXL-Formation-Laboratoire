@@ -9,8 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnFavorite, btnMap;
-
+    private Button btnFavorite, btnMap, btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +18,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnFavorite = findViewById(R.id.btn_main_favorite);
         btnMap = findViewById(R.id.btn_main_map);
+        btnSearch = findViewById(R.id.btn_main_search);
 
         btnFavorite.setOnClickListener(this);
         btnMap.setOnClickListener(this);
+        btnSearch.setOnClickListener(this);
     }
 
     public void onClick(View v) {
@@ -30,12 +31,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 openFavoriteActivity();
                 break;
             case R.id.btn_main_map:
-                throw new RuntimeException("In development :( ");
+                openMapActivity();
+                break;
+            case R.id.btn_main_search:
+                openSearchFragment();
+                break;
         }
     }
 
     private void openFavoriteActivity() {
         Intent intentList = new Intent(getApplicationContext(), FavoriteActivity.class);
         startActivity(intentList);
+    }
+
+    private void openSearchFragment(){
+        //TODO Implement SearchFragment
+    }
+
+    private void openMapActivity(){
+        //TODO implement map
     }
 }
