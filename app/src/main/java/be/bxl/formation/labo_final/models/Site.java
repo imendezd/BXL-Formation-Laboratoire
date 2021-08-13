@@ -13,33 +13,32 @@ public class Site {
         this.siteInfo = siteInfo;
 
     }
-
+    //Getters
     public int getSiteId() {
         return siteId;
-    }
-
-    public void setSiteId(int siteId) {
-        this.siteId = siteId;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public SiteInfo getSiteInfo() {
         return siteInfo;
+    }
+
+    //Setters
+    public void setName(String name) { this.name = name; }
+
+    public void setSiteId(int siteId) {
+        this.siteId = siteId;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public void setSiteInfo(SiteInfo siteInfo) {
@@ -48,9 +47,6 @@ public class Site {
 
     @Override
     public String toString() {
-        return "Site{" +
-                "name='" + name + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+        return name +" "+ country;
     }
 }

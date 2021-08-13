@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">Labo_Final</string>
+    <string name="app_name">UNESCO Heritage App</string>
     <string name="btn_map">See map</string>
-    <string name="btn_favorite">Favorites locations</string>
+    <string name="btn_favorite">Saved sites</string>
     <string name="title_main_app">UNESCO Heritage</string>
     <string name="btn_back">Back</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_search">Search</string>
 </resources>

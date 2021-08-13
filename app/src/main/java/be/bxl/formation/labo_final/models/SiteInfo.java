@@ -6,76 +6,85 @@ public class SiteInfo {
      private String category;
      private String desc;
      private String continent;
-     private Double[] coords;
+     private Double longitude;
+     private Double latitude;
      private Double area;
      private String dateInscribed;
 
-    public SiteInfo(String category, String desc, String continent, Double[] coords, Double area, String dateInscribed) {
+    public SiteInfo(String category, String desc, String continent, Double latitude, Double longitude, Double area, String dateInscribed) {
         this.category = category;
         this.desc = desc;
         this.continent = continent;
-        this.coords = coords;
+        this.latitude=latitude;
+        this.longitude=longitude;
         this.area = area;
         this.dateInscribed = dateInscribed;
     }
 
+    //Getters
+
     public String getCategory() {
         return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDesc() {
         return desc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
     public String getContinent() {
         return continent;
     }
 
-    public void setContinent(String continent) {
-        this.continent = continent;
+    public Double getLongitude() {
+        return longitude;
     }
 
-    public Double[] getCoords() {
-        return coords;
-    }
-
-    public void setCoords(Double[] coords) {
-        this.coords = coords;
+    public Double getLatitude() {
+        return latitude;
     }
 
     public Double getArea() {
         return area;
     }
 
-    public void setArea(Double area) {
-        this.area = area;
-    }
-
     public String getDateInscribed() {
         return dateInscribed;
+    }
+
+    //Setters
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setContinent(String continent) {
+        this.continent = continent;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setArea(Double area) {
+        this.area = area;
     }
 
     public void setDateInscribed(String dateInscribed) {
         this.dateInscribed = dateInscribed;
     }
 
+    //ToString
+
     @Override
     public String toString() {
-        return "SiteInfo{" +
-                "category='" + category + '\'' +
-                ", desc='" + desc + '\'' +
-                ", continent='" + continent + '\'' +
-                ", coords=" + Arrays.toString(coords) +
-                ", area=" + area +
-                ", dateInscribed='" + dateInscribed + '\'' +
-                '}';
+        return category + '\'' + desc + '\'' + continent + '\'' + longitude + ',' + latitude + '\'' + area + '\'' + dateInscribed;
     }
 }

@@ -27,7 +27,7 @@ public class FavoriteActivity extends AppCompatActivity {
         lvFavPlaces = findViewById(R.id.lv_fav_list);
 
         ArrayList<Site> sites = new ArrayList<>();
-        //TODO add every fav site
+        //TODO add every fav site (How?)
 
         ArrayList<HashMap<String, String>> dataSource = new ArrayList<>();
         for(Site s : sites) {
@@ -49,6 +49,7 @@ public class FavoriteActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_list_back);
         btnBack.setOnClickListener(v -> {
             //TODO Back to main screen
+            //finish();
         });
     }
     //endregion

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnFavorite, btnMap;
 
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         btnMap.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_main_favorite:
