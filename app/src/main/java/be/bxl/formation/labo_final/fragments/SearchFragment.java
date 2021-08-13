@@ -1,7 +1,5 @@
-
 package be.bxl.formation.labo_final.fragments;
 
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -12,14 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 import be.bxl.formation.labo_final.models.Site;
+import be.bxl.formation.labo_final.request.SiteRequestTask;
 
 public class SearchFragment extends Fragment implements SiteRequestTask.OnResultRequestListener {
 
     private EditText etSearchId;
-    private ImageView imgAction;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -48,9 +45,6 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
             }
             return false;
         });
-
-        imgAction = v.findViewById(R.id.img_frag_search_action);
-        imgAction.setOnClickListener(v1 -> searchSite());
 
         return v;
     }
