@@ -6,4 +6,6 @@
     <string name="btn_back">Back</string>
     <string name="btn_search">Search site</string>
     <string name="workInProgress">Work in progress</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
