@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,10 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void openSearchFragment(){
-        //TODO Implement SearchFragment
+        Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
     }
 
     private void openMapActivity(){
-        //TODO implement map
+        Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
     }
 }

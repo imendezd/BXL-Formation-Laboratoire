@@ -37,6 +37,7 @@ public class FavoriteActivity extends AppCompatActivity {
             dataSource.add(decomposition);
         }
 
+        //TODO Change SimpleAdapter
         SimpleAdapter adapter = new SimpleAdapter(
                 getApplicationContext(),
                 dataSource,

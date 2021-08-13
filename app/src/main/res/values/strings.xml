@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">UNESCO Heritage App</string>
-    <string name="btn_map">See map</string>
-    <string name="btn_favorite">Saved sites</string>
-    <string name="title_main_app">UNESCO Heritage</string>
+    <string name="btn_map">Open Map</string>
+    <string name="btn_favorite">Favourite sites</string>
+    <string name="title_main_app">World Heritage List</string>
     <string name="btn_back">Back</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="btn_search">Search</string>
+    <string name="btn_search">Search site</string>
+    <string name="workInProgress">Work in progress</string>
 </resources>
