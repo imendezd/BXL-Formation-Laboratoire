@@ -1,6 +1,8 @@
 package be.bxl.formation.labo_final;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import be.bxl.formation.labo_final.fragments.FavoriteFragment;
+import be.bxl.formation.labo_final.fragments.MainFragment;
 import be.bxl.formation.labo_final.fragments.SearchFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements MainFragment.OnNavListener {
 
     private Button btnFavorite, btnMap, btnSearch;
 
@@ -19,44 +23,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnFavorite = findViewById(R.id.btn_main_favorite);
-        btnMap = findViewById(R.id.btn_main_map);
-        btnSearch = findViewById(R.id.btn_main_search);
+        MainFragment home = MainFragment.newInstance();
+        home.setNavListener(this);
 
-        btnFavorite.setOnClickListener(this);
-        btnMap.setOnClickListener(this);
-        btnSearch.setOnClickListener(this);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.add(R.id.frag_main_content, home);
+        transaction.commit();
     }
 
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_main_favorite:
-                openFavoriteActivity();
+    @Override
+    public void onSelect(MainFragment.SelectedView selected) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        Fragment frag;
+        switch (selected) {
+            case SEARCH:
+                frag = SearchFragment.newInstance();
                 break;
-            case R.id.btn_main_map:
-                openMapFragment();
+            case FAV:
+                frag = FavoriteFragment.newInstance();
                 break;
-            case R.id.btn_main_search:
-                openSearchFragment();
-                break;
+            default:
+                throw new RuntimeException("Not supported fragment");
         }
-    }
 
-    private void openFavoriteActivity() {
-        Intent intentList = new Intent(getApplicationContext(), FavoriteActivity.class);
-        startActivity(intentList);
-    }
+        transaction.replace(R.id.frag_main_content, frag);
 
-    private void openSearchFragment(){
-        Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
-        /* This should be donne with fragment not with intent. Change everything to fragment? */
-        /*
-         Intent intentSearch = new Intent(getApplicationContext(), SearchFragment.class);
-        startActivity(intentSearch);
-        */
-    }
+        transaction.setCustomAnimations(
+                android.R.anim.slide_in_left,
+                android.R.anim.fade_out,
+                android.R.anim.fade_in,
+                android.R.anim.slide_out_right);
 
-    private void openMapFragment(){
-        Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
+        transaction.addToBackStack(null);
+
+        transaction.commit();
     }
 }
