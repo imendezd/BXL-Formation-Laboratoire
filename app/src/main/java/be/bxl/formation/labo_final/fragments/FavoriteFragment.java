@@ -40,7 +40,6 @@ public class FavoriteFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_favorite, container, false);
 
         lvFavPlaces = v.findViewById(R.id.lv_fav_list);
-        btnBack = v.findViewById(R.id.btn_list_back);
 
         ArrayList<Site> sites = new ArrayList<>();
         //TODO add every fav site
