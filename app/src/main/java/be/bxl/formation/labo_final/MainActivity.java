@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import be.bxl.formation.labo_final.fragments.SearchFragment;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnFavorite, btnMap, btnSearch;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 openFavoriteActivity();
                 break;
             case R.id.btn_main_map:
-                openMapActivity();
+                openMapFragment();
                 break;
             case R.id.btn_main_search:
                 openSearchFragment();
@@ -47,9 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openSearchFragment(){
         Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
+        /*Intent intentSearch = new Intent(getApplicationContext(), SearchFragment.class);
+        startActivity(intentSearch);*/
     }
 
-    private void openMapActivity(){
+    private void openMapFragment(){
         Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
     }
 }

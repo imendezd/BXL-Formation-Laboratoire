@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import be.bxl.formation.labo_final.R;
 import be.bxl.formation.labo_final.models.Site;
 import be.bxl.formation.labo_final.request.SiteRequestTask;
 
