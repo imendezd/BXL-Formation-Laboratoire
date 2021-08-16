@@ -56,7 +56,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             sendNavEvent(SelectedView.MAP);
         }
         else {
-            throw  new RuntimeException("Event clic not supported");
+            throw  new RuntimeException("Event click not supported");
         }
     }
 

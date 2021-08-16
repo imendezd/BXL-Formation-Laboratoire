@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import be.bxl.formation.labo_final.fragments.FavoriteFragment;
 import be.bxl.formation.labo_final.fragments.MainFragment;
+import be.bxl.formation.labo_final.fragments.MapsFragment;
 import be.bxl.formation.labo_final.fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnNavListener {
@@ -43,7 +44,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnNa
             case FAV:
                 frag = FavoriteFragment.newInstance();
                 break;
+            case MAP:
+                frag = MapsFragment.newInstance();
+                break;
             default:
+
                 throw new RuntimeException("Not supported fragment");
         }
 

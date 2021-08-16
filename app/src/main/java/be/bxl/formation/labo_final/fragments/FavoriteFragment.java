@@ -42,6 +42,9 @@ public class FavoriteFragment extends Fragment {
         lvFavPlaces = v.findViewById(R.id.lv_fav_list);
         btnBack = v.findViewById(R.id.btn_list_back);
 
+        ArrayList<Site> sites = new ArrayList<>();
+        //TODO add every fav site
+
         ArrayList<HashMap<String, String>> dataSource = new ArrayList<>();
         for(Site s : sites) {
             HashMap<String, String> decomposition = new HashMap<>();
@@ -51,6 +54,7 @@ public class FavoriteFragment extends Fragment {
         }
 
         //TODO Change SimpleAdapter
+
         SimpleAdapter adapter = new SimpleAdapter(
                 v.getContext(),
                 dataSource,
