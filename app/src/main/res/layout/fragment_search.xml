@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="20sp"
-        android:text="Tap a name here" />
+        android:text="@string/tv_frag_search_tap_name" />
 
     <LinearLayout
         android:layout_width="match_parent"

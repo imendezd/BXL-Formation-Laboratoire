@@ -49,8 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openSearchFragment(){
         Toast.makeText(this, R.string.workInProgress, Toast.LENGTH_LONG).show();
-        /*Intent intentSearch = new Intent(getApplicationContext(), SearchFragment.class);
-        startActivity(intentSearch);*/
+        /* This should be donne with fragment not with intent. Change everything to fragment? */
+        /*
+         Intent intentSearch = new Intent(getApplicationContext(), SearchFragment.class);
+        startActivity(intentSearch);
+        */
     }
 
     private void openMapFragment(){
