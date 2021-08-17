@@ -30,9 +30,9 @@ public class MapsFragment extends Fragment {
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng greenwichEcuador = new LatLng(0, 0);
-            googleMap.addMarker(new MarkerOptions().position(greenwichEcuador).title("Marker"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(greenwichEcuador));
+            LatLng random = new LatLng(52, 8);
+            googleMap.addMarker(new MarkerOptions().position(random).title("Marker"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(random));
         }
 
 
