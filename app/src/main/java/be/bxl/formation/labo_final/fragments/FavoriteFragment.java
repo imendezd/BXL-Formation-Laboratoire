@@ -52,7 +52,7 @@ public class FavoriteFragment extends Fragment {
             dataSource.add(decomposition);
         }
 
-        //TODO Change SimpleAdapter
+        //TODO Modify SimpleAdapter
 
         SimpleAdapter adapter = new SimpleAdapter(
                 v.getContext(),

@@ -7,28 +7,46 @@
     tools:context=".fragments.SearchFragment">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_search"
+        android:textSize="40sp"
+        android:textAlignment="center"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="20sp"
-        android:text="@string/tv_frag_search_name" />
+        android:text="@string/tv_frag_search_by" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <Spinner
+            android:id="@+id/sp_frag_search_by"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
         <EditText
             android:id="@+id/et_frag_search_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:imeOptions="actionSearch"
-            android:hint="@string/tv_frag_search_name"
+            android:hint="@string/et_hint_search"
             android:inputType="text" />
 
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:layout_width="match_parent"

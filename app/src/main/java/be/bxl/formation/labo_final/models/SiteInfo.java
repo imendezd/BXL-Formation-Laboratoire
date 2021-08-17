@@ -15,8 +15,8 @@ public class SiteInfo {
         this.category = category;
         this.desc = desc;
         this.continent = continent;
-        this.latitude=latitude;
-        this.longitude=longitude;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.area = area;
         this.dateInscribed = dateInscribed;
     }

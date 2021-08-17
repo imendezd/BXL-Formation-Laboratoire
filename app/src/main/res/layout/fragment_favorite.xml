@@ -10,7 +10,7 @@ tools:context=".fragments.FavoriteFragment">
     <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="@string/title_main_app"
+    android:text="@string/btn_favorite"
     android:textSize="40sp"
     android:textAlignment="center"/>
 

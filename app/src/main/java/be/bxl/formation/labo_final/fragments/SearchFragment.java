@@ -9,16 +9,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import be.bxl.formation.labo_final.R;
+import be.bxl.formation.labo_final.enums.SearchByEnum;
 import be.bxl.formation.labo_final.models.Site;
 import be.bxl.formation.labo_final.request.SiteRequestTask;
 
 public class SearchFragment extends Fragment implements SiteRequestTask.OnResultRequestListener {
 
     private EditText etSearchId;
+    private Spinner spSearchBy;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -38,8 +45,24 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_search, container, false);
-
+        spSearchBy = v.findViewById(R.id.sp_frag_search_by);
         etSearchId = v.findViewById(R.id.et_frag_search_id);
+
+        // Spinner SearchBy
+        List<String> categories = new ArrayList<>();
+        for(SearchByEnum category :SearchByEnum.values()) {
+            categories.add(category.getName(v.getContext()));
+        }
+
+        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(v.getContext(),
+                android.R.layout.simple_spinner_item,
+                categories
+        );
+
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spSearchBy.setAdapter(categoryAdapter);
+
         etSearchId.setOnEditorActionListener((v1, actionId, event) -> {
             if(actionId == EditorInfo.IME_ACTION_SEARCH) {
                 searchSite();

@@ -26,19 +26,7 @@ public class MapsFragment extends Fragment {
 
     public static MapsFragment newInstance() { return new MapsFragment(); }
 
-    private OnMapReadyCallback callback = new OnMapReadyCallback() {
-
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
-            LatLng random = new LatLng(52, 8);
-            googleMap.addMarker(new MarkerOptions().position(random).title("Marker"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(random));
-        }
-
-
-    };
-
-    public void onCreate(Bundle savedInstanceState) { MapsFragment.super.onCreate(savedInstanceState);}
+    public void onCreate(Bundle savedInstanceState) { MapsFragment.super.onCreate(savedInstanceState); }
 
     @Nullable
     @Override
@@ -49,12 +37,18 @@ public class MapsFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onViewCreated(@NonNull View v, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(v, savedInstanceState);
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
     }
+
+    private OnMapReadyCallback callback = googleMap -> {
+        LatLng random = new LatLng(52, 8);
+        googleMap.addMarker(new MarkerOptions().position(random).title("Marker"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(random));
+    };
 }

@@ -21,7 +21,7 @@ public class SiteRequestTask extends AsyncTask<Integer, Void, Site> {
         this.listener = listener;
     }
 
-    //TODO Find URL
+    //TODO Add API URL
     private String URL_BASE = "";
 
     @Override
