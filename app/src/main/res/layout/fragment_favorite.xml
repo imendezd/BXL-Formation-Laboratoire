@@ -11,8 +11,7 @@ tools:context=".fragments.FavoriteFragment">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/btn_favorite"
-    android:textSize="40sp"
-    android:textAlignment="center"/>
+        style="@style/TitleFont"/>
 
     <ListView
     android:id="@+id/lv_fav_list"

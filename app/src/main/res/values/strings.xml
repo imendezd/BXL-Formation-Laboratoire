@@ -10,4 +10,8 @@
     <string name="search_by_name">Name</string>
     <string name="tv_frag_search_by">Search by:</string>
     <string name="et_hint_search">Search</string>
+    <string name="tv_item_fragment_world_heritage">World Heritage</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="empty">---</string>
 </resources>
