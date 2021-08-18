@@ -14,4 +14,9 @@
     <string name="name">Name</string>
     <string name="country">Country</string>
     <string name="empty">---</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="btn_add_fav">Add to favorite</string>
+    <string name="date_inscribed">Date inscribed</string>
+    <string name="area">Area</string>
 </resources>

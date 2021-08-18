@@ -4,10 +4,17 @@
     <style name="TitleFont" >
         <item name="android:textSize">@dimen/title</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
         <item name="android:fontFamily">serif</item>
         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:textSize">@dimen/textView</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:fontFamily">serif</item>
     </style>
 
 </resources>
