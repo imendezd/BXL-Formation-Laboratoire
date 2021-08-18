@@ -17,8 +17,6 @@ import be.bxl.formation.labo_final.fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnNavListener {
 
-    private Button btnFavorite, btnMap, btnSearch;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnNa
                 frag = MapsFragment.newInstance();
                 break;
             default:
-
                 throw new RuntimeException("Not supported fragment");
         }
 
