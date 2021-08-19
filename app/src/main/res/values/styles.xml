@@ -17,4 +17,11 @@
         <item name="android:fontFamily">serif</item>
     </style>
 
+    <style name="button">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginEnd">120dp</item>
+    </style>
+
 </resources>

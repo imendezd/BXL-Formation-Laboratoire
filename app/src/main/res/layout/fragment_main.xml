@@ -6,53 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".fragments.MainFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/title_main_app"
-        style="@style/TitleFont"
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_world_heritage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_main_map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        style="@style/button"
         android:text="@string/btn_map"
-        app:layout_constraintEnd_toEndOf="@+id/btn_main_favorite"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/btn_main_favorite"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
 
     <Button
         android:id="@+id/btn_main_search"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="140dp"
+        style="@style/button"
         android:text="@string/btn_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_main_map" />
 
     <Button
         android:id="@+id/btn_main_favorite"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="124dp"
+        style="@style/button"
+        android:layout_marginBottom="85dp"
         android:text="@string/btn_favorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
 
-
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.MainFragment"/>
+    <!-- <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.MainFragment"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></FrameLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
