@@ -6,7 +6,7 @@ public class Site {
     private String country;
     private SiteInfo siteInfo;
 
-    public Site (int siteId, String name, String country) {
+    public Site (int siteId, String name, String country, SiteInfo siteInfo) {
         this.siteId = siteId;
         this.name = name;
         this.country = country;
