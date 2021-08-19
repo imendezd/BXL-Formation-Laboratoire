@@ -18,11 +18,9 @@ import java.util.HashMap;
 import be.bxl.formation.labo_final.R;
 import be.bxl.formation.labo_final.models.Site;
 
-
 public class FavoriteFragment extends Fragment {
 
     ListView lvFavPlaces;
-    Button btnBack;
 
     public FavoriteFragment() {
         // Required empty public constructor

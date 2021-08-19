@@ -66,7 +66,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    //region Event
+    //region Enum/Inferface
     public enum SelectedView {
         SEARCH,
         FAV,
