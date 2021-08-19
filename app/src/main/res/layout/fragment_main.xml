@@ -18,30 +18,30 @@
 
     <Button
         android:id="@+id/btn_main_map"
-        style="@style/button"
+        style="@style/buttonMain"
         android:text="@string/btn_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
 
     <Button
         android:id="@+id/btn_main_search"
-        style="@style/button"
+        style="@style/buttonMain"
         android:text="@string/btn_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_main_map" />
 
     <Button
         android:id="@+id/btn_main_favorite"
-        style="@style/button"
+        style="@style/buttonMain"
         android:layout_marginBottom="85dp"
         android:text="@string/btn_favorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_main_search" />
 
-    <!-- <FrameLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".fragments.MainFragment"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"></FrameLayout>-->
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

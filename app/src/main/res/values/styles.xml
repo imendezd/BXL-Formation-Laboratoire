@@ -17,11 +17,40 @@
         <item name="android:fontFamily">serif</item>
     </style>
 
-    <style name="button">
+    <style name="heritageInformation">
+        <item name="android:textSize">@dimen/textView</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="buttonMain">
         <item name="android:layout_width">170dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">40dp</item>
         <item name="android:layout_marginEnd">120dp</item>
+    </style>
+
+    <style name="buttonOther">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+    </style>
+
+    <style name="buttonDelete">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:backgroundTint">@color/red</item>
     </style>
 
 </resources>
