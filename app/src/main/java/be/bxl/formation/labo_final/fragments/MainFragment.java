@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 import be.bxl.formation.labo_final.R;
 
 public class MainFragment extends Fragment implements View.OnClickListener {

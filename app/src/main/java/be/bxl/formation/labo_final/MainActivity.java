@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
+import android.app.AlertDialog;
+
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import be.bxl.formation.labo_final.fragments.FavoriteFragment;
 import be.bxl.formation.labo_final.fragments.MainFragment;
@@ -60,5 +58,23 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnNa
         transaction.addToBackStack(null);
 
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Exit?")
+                    .setMessage("Are you sure you want to exit?")
+                    .setNegativeButton(android.R.string.no, null)
+                    .setPositiveButton(android.R.string.yes, (arg0, arg1) ->
+                            MainActivity.super.onBackPressed()).create().show();
+        } else {
+            getSupportFragmentManager().popBackStack();
+        }
+
     }
 }
