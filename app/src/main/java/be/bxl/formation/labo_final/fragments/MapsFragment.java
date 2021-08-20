@@ -47,8 +47,16 @@ public class MapsFragment extends Fragment {
     }
 
     private OnMapReadyCallback callback = googleMap -> {
-        LatLng random = new LatLng(52, 8);
-        googleMap.addMarker(new MarkerOptions().position(random).title("Marker"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(random));
+        LatLng grandPlace = new LatLng(50.847, 4.352);
+        googleMap.addMarker(new MarkerOptions().position(grandPlace).title("Grand Place"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(grandPlace));
+
+        LatLng horta = new LatLng(50.828, 4.362);
+        googleMap.addMarker(new MarkerOptions().position(horta).title("Major Town Houses of the Architect Victor Horta"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(horta));
+
+        LatLng stocletHouse = new LatLng(50.835, 4.416);
+        googleMap.addMarker(new MarkerOptions().position(stocletHouse).title("Stoclet House"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(stocletHouse));
     };
 }
