@@ -17,19 +17,19 @@ public class JsonMapper {
         Site result = null;
 
        try {
-            String name = json.getString("name");
-            int id = json.getInt("id");
-            String country = json.getString("country");
+           int id = json.getInt("recordid");
+           String name = json.getString("name_en");
+           String country = json.getString("country_en");
 
             JSONArray jsonInfo = json.getJSONArray("info");
             SiteInfo siteInfo = new SiteInfo(
-                    jsonInfo.getJSONObject(0).getString(""),
-                    jsonInfo.getJSONObject(1).getString(""),
-                    jsonInfo.getJSONObject(2).getString(""),
-                    jsonInfo.getJSONObject(3).getDouble(""),
-                    jsonInfo.getJSONObject(4).getDouble(""),
-                    jsonInfo.getJSONObject(5).getDouble(""),
-                    jsonInfo.getJSONObject(6).getString("")
+                    jsonInfo.getJSONObject(0).getString("category"),
+                    jsonInfo.getJSONObject(1).getString("short_description_en"),
+                    jsonInfo.getJSONObject(2).getString("continent_en"),
+                    jsonInfo.getJSONObject(3).getDouble("latitude"),
+                    jsonInfo.getJSONObject(4).getDouble("longitude"),
+                    jsonInfo.getJSONObject(5).getDouble("area_hectares"),
+                    jsonInfo.getJSONObject(6).getString("date_inscribed")
                     );
 
             result = new Site(id, name, country, siteInfo);
