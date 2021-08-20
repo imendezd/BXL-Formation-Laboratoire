@@ -13,7 +13,7 @@
     <string name="tv_item_fragment_world_heritage">World Heritage</string>
     <string name="name">Name</string>
     <string name="country">Country</string>
-    <string name="empty">---</string>
+    <string name="empty" translatable="false">---</string>
     <string name="category">Category</string>
     <string name="description">Description</string>
     <string name="btn_add_fav">Add to favorite</string>
