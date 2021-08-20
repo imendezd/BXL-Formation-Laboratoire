@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnNa
 
         if (count == 0) {
             new AlertDialog.Builder(this)
-                    .setTitle("Exit?")
-                    .setMessage("Are you sure you want to exit?")
+                    .setTitle(R.string.exit)
+                    .setMessage(R.string.confirm_Exit)
                     .setNegativeButton(android.R.string.no, null)
                     .setPositiveButton(android.R.string.yes, (arg0, arg1) ->
                             MainActivity.super.onBackPressed()).create().show();

@@ -19,4 +19,6 @@
     <string name="btn_add_fav">Add to favorite</string>
     <string name="date_inscribed">Date inscribed</string>
     <string name="area">Area</string>
+    <string name="exit">Exit</string>
+    <string name="confirm_Exit">Are you sure you want to exit?</string>
 </resources>
