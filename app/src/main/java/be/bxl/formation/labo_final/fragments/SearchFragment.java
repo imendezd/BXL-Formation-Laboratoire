@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
 
     private EditText etSearchId;
     private Spinner spSearchBy;
+    private ListView lvSearch;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -47,6 +49,7 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         spSearchBy = v.findViewById(R.id.sp_frag_search_by);
         etSearchId = v.findViewById(R.id.et_frag_search_id);
+        lvSearch = v.findViewById(R.id.lv_search_list);
 
         // Spinner SearchBy
         List<String> categories = new ArrayList<>();
@@ -84,6 +87,14 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
 
     @Override
     public void onSiteResult(Site site) {
-        Toast.makeText(getContext(), site.getName(), Toast.LENGTH_SHORT).show();
+        switch (spSearchBy.getSelectedItem().toString()){
+            case "Country":
+                Toast.makeText(getContext(), site.getCountry(), Toast.LENGTH_LONG).show();
+                break;
+            case "Name":
+                Toast.makeText(getContext(), site.getName(), Toast.LENGTH_LONG).show();
+                break;
+            default: throw new RuntimeException("Event click not supported");
+        }
     }
 }
