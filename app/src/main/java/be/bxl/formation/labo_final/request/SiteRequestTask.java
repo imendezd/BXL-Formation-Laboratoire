@@ -21,8 +21,7 @@ public class SiteRequestTask extends AsyncTask<Integer, Void, Site> {
         this.listener = listener;
     }
 
-    //TODO Add API URL
-    private String URL_BASE = "";
+    private String URL_BASE = "https://examples.opendatasoft.com/api/records/1.0/search/?dataset=world-heritage-unesco-list&q=";
 
     @Override
     protected Site doInBackground(Integer... integers) {

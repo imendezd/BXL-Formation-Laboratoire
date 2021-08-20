@@ -47,16 +47,25 @@ public class MapsFragment extends Fragment {
     }
 
     private OnMapReadyCallback callback = googleMap -> {
+        //TODO add with loop every location
+        /*
+        for (){
+        * LatLng place = new LatLng(latitude, longitude);
+        * googleMap.addMarker(new MarkerOptions().position(place).title(placeName));
+        * googleMap.moveCamera(CameraUpdateFactory.newLatLng(palce));
+        * }
+        */
         LatLng grandPlace = new LatLng(50.847, 4.352);
         googleMap.addMarker(new MarkerOptions().position(grandPlace).title("Grand Place"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(grandPlace));
 
-        LatLng horta = new LatLng(50.828, 4.362);
-        googleMap.addMarker(new MarkerOptions().position(horta).title("Major Town Houses of the Architect Victor Horta"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(horta));
+        LatLng teide = new LatLng(28.271, -16.644);
+        googleMap.addMarker(new MarkerOptions().position(teide).title("Teide National Park"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(teide));
 
         LatLng stocletHouse = new LatLng(50.835, 4.416);
         googleMap.addMarker(new MarkerOptions().position(stocletHouse).title("Stoclet House"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(stocletHouse));
+
     };
 }
