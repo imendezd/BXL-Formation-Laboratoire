@@ -87,14 +87,12 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
 
     @Override
     public void onSiteResult(Site site) {
-        switch (spSearchBy.getSelectedItem().toString()){
-            case "Country":
-                Toast.makeText(getContext(), site.getCountry(), Toast.LENGTH_LONG).show();
-                break;
-            case "Name":
-                Toast.makeText(getContext(), site.getName(), Toast.LENGTH_LONG).show();
-                break;
-            default: throw new RuntimeException("Event click not supported");
+        if (spSearchBy.getSelectedItemPosition() == 0) {
+            Toast.makeText(getContext(), site.getCountry(), Toast.LENGTH_LONG).show();
+        } else if (spSearchBy.getSelectedItemPosition() == 1){
+            Toast.makeText(getContext(), site.getName(), Toast.LENGTH_LONG).show();
+        }else {
+            throw new RuntimeException("Event click not supported");
         }
     }
 }
