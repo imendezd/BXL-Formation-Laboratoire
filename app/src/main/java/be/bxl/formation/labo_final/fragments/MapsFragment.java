@@ -55,17 +55,37 @@ public class MapsFragment extends Fragment {
         * googleMap.moveCamera(CameraUpdateFactory.newLatLng(palce));
         * }
         */
-        LatLng grandPlace = new LatLng(50.847, 4.352);
-        googleMap.addMarker(new MarkerOptions().position(grandPlace).title("Grand Place"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(grandPlace));
-
         LatLng teide = new LatLng(28.271, -16.644);
         googleMap.addMarker(new MarkerOptions().position(teide).title("Teide National Park"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(teide));
 
+        LatLng grandPlace = new LatLng(50.847, 4.352);
+        googleMap.addMarker(new MarkerOptions().position(grandPlace).title("Grand Place"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(grandPlace));
+
         LatLng stocletHouse = new LatLng(50.835, 4.416);
         googleMap.addMarker(new MarkerOptions().position(stocletHouse).title("Stoclet House"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(stocletHouse));
+
+        LatLng horta = new LatLng(50.828, 4.362);
+        googleMap.addMarker(new MarkerOptions().position(horta).title("Major Town Houses of the Architect Victor Horta (Brussels)"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(horta));
+
+        LatLng brugge = new LatLng(51.209, 3.225);
+        googleMap.addMarker(new MarkerOptions().position(brugge).title("Historic Centre of Brugge"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(brugge));
+
+        LatLng platinMoretus = new LatLng(51.218, 4.398);
+        googleMap.addMarker(new MarkerOptions().position(platinMoretus).title("Plantin-Moretus House-Workshops-Museum Complex"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(platinMoretus));
+
+        LatLng flemishBeguinages = new LatLng(51.031, 4.474);
+        googleMap.addMarker(new MarkerOptions().position(flemishBeguinages).title("Flemish Béguinages"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(flemishBeguinages));
+
+        LatLng notreDameTournai = new LatLng(50.606, 3.389);
+        googleMap.addMarker(new MarkerOptions().position(notreDameTournai).title("Notre-Dame Cathedral in Tournai"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(notreDameTournai));
 
     };
 }
