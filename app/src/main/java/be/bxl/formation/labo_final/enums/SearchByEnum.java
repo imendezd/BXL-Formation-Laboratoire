@@ -8,7 +8,7 @@ import androidx.annotation.StringRes;
 import be.bxl.formation.labo_final.R;
 
 public enum SearchByEnum {
-
+        ID(0, R.string.id),
         NAME(1, R.string.search_by_name),
         COUNTRY(2, R.string.search_by_country);
 
@@ -18,6 +18,7 @@ public enum SearchByEnum {
         private int name;
 
         SearchByEnum(int category, @StringRes int name) {
+
             this.category = category;
             this.name = name;
         }

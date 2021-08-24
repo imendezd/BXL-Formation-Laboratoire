@@ -53,7 +53,7 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
 
         // Spinner SearchBy
         List<String> categories = new ArrayList<>();
-        for(SearchByEnum category :SearchByEnum.values()) {
+        for (SearchByEnum category : SearchByEnum.values()) {
             categories.add(category.getName(v.getContext()));
         }
 
@@ -67,7 +67,7 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
         spSearchBy.setAdapter(categoryAdapter);
 
         etSearchId.setOnEditorActionListener((v1, actionId, event) -> {
-            if(actionId == EditorInfo.IME_ACTION_SEARCH) {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 searchSite();
                 return true;
             }
@@ -78,7 +78,7 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
     }
 
     public void searchSite() {
-        int searchId = Integer.parseInt(etSearchId.getText().toString());
+        String searchId = etSearchId.getText().toString();
 
         SiteRequestTask task = new SiteRequestTask();
         task.setListener(this);
@@ -88,11 +88,15 @@ public class SearchFragment extends Fragment implements SiteRequestTask.OnResult
     @Override
     public void onSiteResult(Site site) {
         if (spSearchBy.getSelectedItemPosition() == 0) {
-            Toast.makeText(getContext(), site.getCountry(), Toast.LENGTH_LONG).show();
-        } else if (spSearchBy.getSelectedItemPosition() == 1){
             Toast.makeText(getContext(), site.getName(), Toast.LENGTH_LONG).show();
-        }else {
-            throw new RuntimeException("Event click not supported");
+            if (spSearchBy.getSelectedItemPosition() == 1) {
+                Toast.makeText(getContext(), site.getCountry(), Toast.LENGTH_LONG).show();
+            } else if (spSearchBy.getSelectedItemPosition() == 2) {
+                Toast.makeText(getContext(), site.getName(), Toast.LENGTH_LONG).show();
+            } else {
+                throw new RuntimeException("Event click not supported");
+            }
         }
     }
+
 }

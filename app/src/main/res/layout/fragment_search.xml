@@ -38,7 +38,7 @@
             android:layout_weight="4"
             android:imeOptions="actionSearch"
             android:hint="@string/et_hint_search"
-            android:inputType="text" />
+            android:inputType="text"/>
 
     </LinearLayout>
 
