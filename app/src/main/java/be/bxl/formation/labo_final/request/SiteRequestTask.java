@@ -42,5 +42,10 @@ public class SiteRequestTask extends AsyncTask<Integer, Void, Site> {
         return null;
     }
 
-
+    @Override
+    protected void onPostExecute(Site site) {
+        if (listener != null) {
+            listener.onSiteResult(site);
+        }
+    }
 }
